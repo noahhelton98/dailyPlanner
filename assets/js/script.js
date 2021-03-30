@@ -9,7 +9,10 @@ var militaryTimes = [];
 for (var i = 9; i < 18; i++){
     inputAreas.push($(`#${i} textarea`))
     militaryTimes.push(i);
-    localStorage.setItem(i, JSON.stringify(''))
+
+    if (!JSON.parse(localStorage.getItem(`${i}`))){
+        localStorage.setItem(i, JSON.stringify(''))
+    }
 
 }
 
