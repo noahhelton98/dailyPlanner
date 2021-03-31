@@ -20,13 +20,9 @@ for (var i = 9; i < 18; i++){
 //THEN the saved events persist
 for (var i = 9; i < 18; i++){
     var retrievedNote = JSON.parse(localStorage.getItem(`${i}`));
-    console.log(retrievedNote)
-    if (retrievedNote.value == ''){
-        inputAreas[i-9][0].innerHTML = retrievedNote;
-    }else{
-        inputAreas[i-9][0].innerHTML =  retrievedNote;
+    inputAreas[i-9][0].innerHTML = retrievedNote;
 }
-}
+
 
 //Set the colors based on the current time
 for (var i = 0; i < inputAreas.length; i++){
